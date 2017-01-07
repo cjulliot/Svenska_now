@@ -1,11 +1,13 @@
 #pragma once
+#include <string>
 
 class Word {
     public:
         virtual void print() const = 0;
 
         /* Getters */
-        Word translation() const;
+        string word() const;
+        string translation() const;
         bool is_known() const;
 
         /* Setters */
@@ -14,10 +16,12 @@ class Word {
 
 
     protected:
-        Word _translation;
+        string _word;
+        string _translation;
         bool _is_known;
 };
 
-inline Word Word::translation() const { return _translation; }
+inline string Word::word() const { return _word; }
+inline string Word::translation() const { return _translation; }
 inline bool Word::is_known() const { return _is_known; }
 
