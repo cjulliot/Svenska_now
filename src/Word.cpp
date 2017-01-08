@@ -1,6 +1,6 @@
 #include "Word.h"
 
-void Word::set_translation(const Word translation) {
+void Word::set_translation(const std::string translation) {
     _translation = translation;
 }
 
